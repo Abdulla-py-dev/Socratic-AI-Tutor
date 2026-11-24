@@ -26,6 +26,10 @@ class Settings(BaseSettings):
     # MUST be provided via the SECRET_KEY environment variable in production.
     secret_key: str = ""
 
+    # File upload configuration
+    upload_dir: str = "./uploads"
+    max_upload_size_mb: int = 20
+
     # Pydantic-settings configuration: read from a .env file if present.
     model_config = SettingsConfigDict(
         env_file=".env",

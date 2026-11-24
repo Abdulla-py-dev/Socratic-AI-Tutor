@@ -15,6 +15,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from backend.config import settings
 from backend.database import check_database_connection, create_tables
 from backend.routes.auth_routes import router as auth_router
+from backend.routes.document_routes import router as document_router
 
 # ---------------------------------------------------------------------------
 # Application metadata
@@ -48,6 +49,7 @@ app.add_middleware(
 # Routers
 # ---------------------------------------------------------------------------
 app.include_router(auth_router)
+app.include_router(document_router)
 
 
 # ---------------------------------------------------------------------------
