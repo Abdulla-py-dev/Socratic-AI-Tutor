@@ -222,5 +222,8 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# Uploads (PDF files)
+
+
+
+# Uploaded PDF files
 uploads/
